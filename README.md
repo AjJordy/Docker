@@ -18,3 +18,7 @@
 - `docker run --name nginx -d --mount type=volume,source=meuVolume,target=/app nginx`: Rodando um docker usando um volume
 - `docker run --name nginx -d -v meuVolume:/app nginx`: Usando -v para usar um volume
 - `docker volume prune`: Limpar todos os volumes da máquina
+- `docker images`: Lista as imagens baixadas
+- `docker pull IMAGE_NAME`: Faz o download de uma imagem
+- `docker rmi IMAGE_NAME`: Remover imagem local
+- ``
