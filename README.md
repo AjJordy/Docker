@@ -21,4 +21,7 @@
 - `docker images`: Lista as imagens baixadas
 - `docker pull IMAGE_NAME`: Faz o download de uma imagem
 - `docker rmi IMAGE_NAME`: Remover imagem local
-- ``
+- `docker build -t ajjordy/nginx-com-vim:latest .`: Criando uma imagem a partir do Dockerfile
+- `docker run -it ajjordy/nginx-com-vim bash`: Rodando minha imagem
+- `docker ps -a -q`: Listar IDs de todos os conteiners 
+- `docker rm $(docker ps -a -q) -f`: Remover todos os conteiners 
