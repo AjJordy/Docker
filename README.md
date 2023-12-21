@@ -11,3 +11,10 @@
 - `docker run -d --name nginx nginx`: Dar um nome ao container
 - `docker exec -it nginx bash`: Entrar num container rodando via bash
 - `docker run -d --name nginx -p 8080:80 -v ~/html/:/usr/share/nginx/html nginx`: Usando volume 
+- `docker run -d --name nginx -p 8080:80 --mount type=bind,source=/home/jordy/html,target=/usr/share/nginx/html nginx`: Volume com link explicito
+- `docker volume create meuVolume`: Criando volume
+- `docker volume ls`: Listando os volumes
+- `docker volume inspect meuVolume`: Inspecionando os volumes
+- `docker run --name nginx -d --mount type=volume,source=meuVolume,target=/app nginx`: Rodando um docker usando um volume
+- `docker run --name nginx -d -v meuVolume:/app nginx`: Usando -v para usar um volume
+- `docker volume prune`: Limpar todos os volumes da máquina
