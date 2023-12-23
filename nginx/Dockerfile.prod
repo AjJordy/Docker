@@ -1,0 +1,9 @@
+# docker build -t ajjordy/nginx:prod . -f Dockerfile.prod
+# docker network create laranet
+# docker run -d --network laranet --name nginx -p 8080:80 ajjordy/nginx:prod
+FROM nginx:1.15.0-alpine
+
+RUN rm /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/conf.d
+
+RUN mkdir /var/www/html -p && touch /var/www/html/index.php
