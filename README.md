@@ -42,6 +42,28 @@
 - `docker network create --driver bridge minharede`: Criar rede
 - `docker network connect minharede ubuntu3`: Conectar um container na rede
 
+- **bridge:** Um conteiner se comunicando com outro *(default)*
+- **host:** Um conteiner se comunicando com a maquina host
+- **overlay:** Um conteiner se comunicando com outro em máquinas separadas
+- **maclan:** ??? 
+- **none:** Conteiner isolado
+
+- Acessando o host: `host.docker.internal`
+
+
+### Docker Compose
+
+- `docker-compose up -d`: Roda arquivo docker-compose.yml
+- `docker-compose up --build`: Força o build dos conteiners 
+- `docker-compose ps`: Lista os conteiners
+- `docker-compose down`: Para os conteiners 
+
+
+https://github.com/jwilder/dockerize
+
+
+### Exemplos
+
 - Environments variables: 
 ```Dockerfile
 ENV MY_VAR_ENV 1234
@@ -61,13 +83,3 @@ ENTRYPOINT [ "echo", "Hello" ]
 CMD ["world"] # default
 # > Hello jordy
 ```
-
-# Networks 
-
-- **bridge:** Um conteiner se comunicando com outro *(default)*
-- **host:** Um conteiner se comunicando com a maquina host
-- **overlay:** Um conteiner se comunicando com outro em máquinas separadas
-- **maclan:** ??? 
-- **none:** Conteiner isolado
-
-- Acessando o host: `host.docker.internal`

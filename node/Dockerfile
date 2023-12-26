@@ -3,7 +3,9 @@
 # docker build -t ajjordy/hello-express .
 # docker run -p 3000:3000 ajjordy/hello-express 
 FROM node:15
+
 WORKDIR /usr/src/app
-COPY . .
+# COPY . .
+
 EXPOSE 3000
-CMD [ "node", "index.js" ]
+# CMD [ "node", "index.js" ]
